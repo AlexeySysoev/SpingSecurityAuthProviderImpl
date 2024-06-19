@@ -24,7 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //config Spring security & auth
         http.cors().and().csrf().disable()//костыль - отключение защиты от межсайтовой подделки запросов
                 .authorizeRequests()
-                .antMatchers("/auth/login", "/error").permitAll()
+                .antMatchers("/auth/login", "/auth/registration","/error").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/auth/login")

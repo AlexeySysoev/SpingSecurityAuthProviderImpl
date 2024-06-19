@@ -1,10 +1,7 @@
 package ru.sysoev.SecureApp.security;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.parameters.P;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Component;
 import ru.sysoev.SecureApp.models.Person;
 
 import java.util.Collection;
