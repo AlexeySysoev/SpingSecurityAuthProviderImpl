@@ -15,9 +15,6 @@ public class PeopleService {
         this.peopleRepository = peopleRepository;
     }
     public Optional<Person> findUserByPerson(Person person) {
-        Optional<Person> personFromDb = peopleRepository.findByUsername(person.getUsername());
-        if (personFromDb.isPresent()) System.out.println("Нашли в базе человека: " + personFromDb.get().getUsername());
         return peopleRepository.findByUsername(person.getUsername());
-
     }
 }
